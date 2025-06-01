@@ -1,46 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>HÃY LÀM NY ANH NHÉ</title>
+    <meta name="theme-color" content="#ff88aa">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #d6336c;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff88aa;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6699;
+        }
+
+        #messageContainer {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 22px;
+            }
+
+            button {
+                width: 100%;
+                margin: 8px 0;
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        
         <div id="gifContainer">
-            <img id="gifContainerImg" src="mocha.gif" alt="Ositos Iniciales" ">
+            <img id="gifContainerImg" src="mocha.gif" alt="Ositos Iniciales">
         </div>
+
         <div id="happyGifContainer" style="display: none;">
-            <img src="mocha5final.gif" alt="Ositos Felices" style="width: 100%; height: 100%;">
+            <img src="mocha5final.gif" alt="Ositos Felices">
         </div>
         <div id="happyGifContainer2" style="display: none;">
-            <img src="mocha6final.gif" alt="Ositos Felices" style="width: 100%; height: 100%;">
+            <img src="mocha6final.gif" alt="Ositos Felices">
         </div>
         <div id="happyGifContainer3" style="display: none;">
-            <img src="mocha7final.gif" alt="Ositos Felices" style="width: 100%; height: 100%;">
+            <img src="mocha7final.gif" alt="Ositos Felices">
         </div>
         <div id="happyGifContainer4" style="display: none;">
-            <img src="mocha9final.gif" alt="Ositos Felices" style="width: 100%; height: 100%;">
+            <img src="mocha9final.gif" alt="Ositos Felices">
         </div>
+
         <div id="sadGifContainer" style="display: none;">
-            <img src="mocha2.gif" alt="Osito Triste" style="width: 80%; height: 80%;">
+            <img src="mocha2.gif" alt="Osito Triste">
         </div>
         <div id="sadGifContainer1" style="display: none;">
-            <img src="mocha3.gif" alt="Osito Triste" style="width: 80%; height: 80%;">
+            <img src="mocha3.gif" alt="Osito Triste">
         </div>
         <div id="sadGifContainer2" style="display: none;">
-            <img src="mocha4.gif" alt="Osito Triste" style="width: 80%; height: 80%;">
+            <img src="mocha4.gif" alt="Osito Triste">
         </div>
-        
+
         <h1 id="question">Em đồng ý làm người yêu anh nhé!</h1>
         <div id="messageContainer" style="display: none;"></div>
 
         <button id="siBtn">Em đồng ý</button>
         <button id="noBtn">Không</button>
-        
     </div>
+<script>
+    // Chặn chuột phải
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Chặn F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.addEventListener('keydown', function(e) {
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+            (e.ctrlKey && e.key === 'U')
+        ) {
+            e.preventDefault();
+        }
+    });
+</script>
 
     <script src="script.js"></script>
 </body>
